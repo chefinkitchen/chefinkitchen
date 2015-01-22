@@ -1,4 +1,14 @@
-h1 {
- color: #D3922C;
- font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+div {
+ color: #fff;
+ font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+ text-align: center;
+ position: relative;
+ display: block;
+ margin: 100px auto;
+ width: 330px;
+ font-size : 44px;
+ cursor : pointer;
 }
+
+body {
+    background-color: #D3912C;}
