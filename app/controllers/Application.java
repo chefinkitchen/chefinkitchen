@@ -26,6 +26,7 @@ import com.feth.play.module.pa.user.AuthUser;
 
 public class Application extends Controller {
 
+<<<<<<< HEAD
 	public static final String FLASH_MESSAGE_KEY = "message";
 	public static final String FLASH_ERROR_KEY = "error";
 	public static final String USER_ROLE = "user";
@@ -98,5 +99,10 @@ public class Application extends Controller {
 	public static String formatTimestamp(final long t) {
 		return new SimpleDateFormat("yyyy-dd-MM HH:mm:ss").format(new Date(t));
 	}
+=======
+    public static Result index() {
+        return ok(index.render("Welcome to Chef-in Kitchen"));
+    }
+>>>>>>> origin/master
 
 }
