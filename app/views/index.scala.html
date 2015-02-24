@@ -1,7 +1,23 @@
-@(message: String)
 
-@main("Welcome to Play") {
+@main(Messages("playauthenticate.index.title")) {
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>@Messages("playauthenticate.index.intro")</h1>
+      </div>
 
-    @play20.welcome(message, style = "Java")
-
-}
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-xs-6 col-sm-4">
+          <h2>@Messages("playauthenticate.index.heading")</h2>
+          <p><a class="btn" href="#">@Messages("playauthenticate.index.details") &raquo;</a></p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <h2>@Messages("playauthenticate.index.heading")</h2>
+              <p><a class="btn" href="#">@Messages("playauthenticate.index.details") &raquo;</a></p>
+       </div>
+        <div class="col-xs-6 col-sm-4">
+          <h2>@Messages("playauthenticate.index.heading")</h2>
+          <p><a class="btn" href="#">@Messages("playauthenticate.index.details") &raquo;</a></p>
+        </div>
+      </div>
+    }
