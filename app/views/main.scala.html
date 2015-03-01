@@ -7,7 +7,7 @@
 <html lang="@lang().code()">
     <head>
         <title>@title</title>
-
+<link rel="icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))"></script>
@@ -42,6 +42,18 @@
                         @subjectNotPresent() {
                             <li class="@("active".when(nav == "signup"))"><a href="@routes.Application.signup()">@Messages("playauthenticate.navigation.signup")</a></li>
                         }
+                        
+                        @subjectNotPresent() {
+                            <li class="@("active".when(nav == "cheflogin"))"><a href="@routes.ChefSignUp.doChefSignup()">@Messages("playauthenticate.navigation.cheflogin")</a></li>
+                        }
+                        
+            <form role="search" class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" placeholder="Search chef,menu ex thai,john" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+       
                     </ul>
 
                     @subjectPresentOr() {

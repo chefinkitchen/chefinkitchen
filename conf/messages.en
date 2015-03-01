@@ -70,6 +70,14 @@ playauthenticate.signup.name=Your name
 playauthenticate.signup.now=Sign up now
 playauthenticate.signup.oauth=or sign up using one of the following providers:
 
+playauthenticate.cheflogin.title=Chef Signup
+playauthenticate.cheflogin.fname=First Name
+playauthenticate.cheflogin.lname=Last Name
+playauthenticate.cheflogin.email=Email Address
+playauthenticate.cheflogin.now=Sign up now
+playauthenticate.cheflogin.oauth=or sign up using one of the following providers:
+
+
 playauthenticate.verify.account.title=E-mail verification required
 playauthenticate.verify.account.before=Before setting a password, you need to
 playauthenticate.verify.account.first=first verify your e-mail address
@@ -120,6 +128,7 @@ playauthenticate.navigation.login=Log in
 playauthenticate.navigation.home=Home
 playauthenticate.navigation.restricted=Restricted page
 playauthenticate.navigation.signup=Sign up
+playauthenticate.navigation.cheflogin=Chef Sign up
 
 # play-authenticate: Handler
 playauthenticate.handler.loginfirst=You need to log in first, to view ''{0}''
@@ -137,7 +146,7 @@ playauthenticate.profile.session_endless=Your user ID is {0} and your session wi
 playauthenticate.profile.password_change=Change/set a password for your account
 
 # play-authenticate - sample: Index page
-playauthenticate.index.title=Welcome to Chef In Kitche
+playauthenticate.index.title=Welcome to Chef In Kitchen
 playauthenticate.index.intro=Taste the world with us
 playauthenticate.index.intro_2=This is a template for a simple application with authentication.
 playauthenticate.index.intro_3=Check the main navigation above for simple page examples including supported authentication features.

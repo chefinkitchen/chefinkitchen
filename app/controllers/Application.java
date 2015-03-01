@@ -10,6 +10,7 @@ import play.mvc.Controller;
 import play.mvc.Http.Session;
 import play.mvc.Result;
 import providers.MyUsernamePasswordAuthProvider;
+import providers.MyUsernamePasswordAuthProvider.ChefSignup;
 import providers.MyUsernamePasswordAuthProvider.MyLogin;
 import providers.MyUsernamePasswordAuthProvider.MySignup;
 import views.html.index;
@@ -17,6 +18,7 @@ import views.html.login;
 import views.html.profile;
 import views.html.restricted;
 import views.html.signup;
+
 import be.objectify.deadbolt.java.actions.Group;
 import be.objectify.deadbolt.java.actions.Restrict;
 
@@ -73,6 +75,10 @@ public class Application extends Controller {
 		return ok(signup.render(MyUsernamePasswordAuthProvider.SIGNUP_FORM));
 	}
 
+	/*public static Result chefsignup() {
+		return ok(cheflogin.render(MyUsernamePasswordAuthProvider.CHEF_LOGIN_FORM));
+	}*/
+	
 	public static Result jsRoutes() {
 		return ok(
 				Routes.javascriptRouter("jsRoutes",
@@ -94,6 +100,21 @@ public class Application extends Controller {
 			return UsernamePasswordAuthProvider.handleSignup(ctx());
 		}
 	}
+	
+/*	public static Result doChefSignup() {
+		com.feth.play.module.pa.controllers.Authenticate.noCache(response());
+		final Form<ChefSignup> filledForm = MyUsernamePasswordAuthProvider.CHEF_LOGIN_FORM
+				.bindFromRequest();
+		if (filledForm.hasErrors()) {
+			// User did not fill everything properly
+			return badRequest(signup.render(filledForm));
+		} else {
+			// Everything was filled
+			// do something with your part of the form before handling the user
+			// signup
+			return UsernamePasswordAuthProvider.handleSignup(ctx());
+		}
+	}*/
 
 	public static String formatTimestamp(final long t) {
 		return new SimpleDateFormat("yyyy-dd-MM HH:mm:ss").format(new Date(t));

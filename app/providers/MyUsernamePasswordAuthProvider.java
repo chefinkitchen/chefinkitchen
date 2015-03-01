@@ -107,9 +107,28 @@ public class MyUsernamePasswordAuthProvider
 		}
 	}
 
+	public static class ChefSignup extends MyLogin {
+
+	/*	@Required
+		@MinLength(5)
+		public String repeatPassword;*/
+
+		@Required
+		public String lastName;
+
+		/*public String validate() {
+			if (password == null || !password.equals(repeatPassword)) {
+				return Messages
+						.get("playauthenticate.password.signup.error.passwords_not_same");
+			}
+			return null;
+		}*/
+	}
+
 	public static final Form<MySignup> SIGNUP_FORM = form(MySignup.class);
 	public static final Form<MyLogin> LOGIN_FORM = form(MyLogin.class);
-
+	public static final Form<ChefSignup> CHEF_LOGIN_FORM = form(ChefSignup.class);
+	
 	public MyUsernamePasswordAuthProvider(Application app) {
 		super(app);
 	}
@@ -120,6 +139,10 @@ public class MyUsernamePasswordAuthProvider
 
 	protected Form<MyLogin> getLoginForm() {
 		return LOGIN_FORM;
+	}
+
+	protected Form<ChefSignup> getChefLoginForm() {
+		return CHEF_LOGIN_FORM;
 	}
 
 	@Override

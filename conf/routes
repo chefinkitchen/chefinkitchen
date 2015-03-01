@@ -18,6 +18,8 @@ GET     /authenticate/:provider     com.feth.play.module.pa.controllers.Authenti
 GET     /signup                     controllers.Application.signup
 POST    /signup                     controllers.Application.doSignup
 
+
+
 GET     /accounts/unverified        controllers.Signup.unverified
 GET     /authenticate/:provider/denied     controllers.Signup.oAuthDenied(provider: String)
 
@@ -46,3 +48,7 @@ POST    /login/password/forgot     controllers.Signup.doForgotPassword
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 GET     /webjars/*file              controllers.WebJarAssets.at(file)
+
+
+POST    /chefsignup                 controllers.ChefSignUp.doChefSignup
+GET    /chefsignup                                controllers.ChefSignUp.chefsignup
