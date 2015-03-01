@@ -1,0 +1,51 @@
+@(chefLoginForm: Form[_])
+
+@import helper._
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapBasic.f) }
+
+
+
+@main(Messages("playauthenticate.cheflogin.title"),"cheflogin") {
+
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-md-8">
+		<h1>@Messages("playauthenticate.cheflogin.title")</h1>
+	</div>
+</div>
+<div id="cheflogin" class="row">
+  @* Display proprietary login form *@
+	<div class="col-xs-6 col-md-4">
+		@helper.form(routes.ChefSignUp.doChefSignup, 'class -> "form-horizontal",'role -> "form"){
+		 
+		  @if(chefLoginForm.hasGlobalErrors){
+				<p class="alert alert-danger">
+				  "Error"
+				</p>
+			}
+		
+		 @inputText( 
+		 	chefLoginForm("firstName"), 
+		 	'_label ->Messages("playauthenticate.cheflogin.fname") 
+		
+		)
+		 @inputText( 
+		 	chefLoginForm("lastName"), 
+		 	'_label ->Messages("playauthenticate.cheflogin.lname") 
+		
+		)
+		@inputText( 
+		 	chefLoginForm("email"), 
+		 	'_label ->Messages("playauthenticate.cheflogin.email") 
+		
+		)
+
+		  @_passwordPartial(chefLoginForm)
+
+		<button type="submit" class="btn btn-default">@Messages("playauthenticate.cheflogin.now")</button>
+		}
+	</div>
+
+</div>
+
+</div>
+}
