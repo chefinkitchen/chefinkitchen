@@ -13,7 +13,10 @@
         <script type="text/javascript" src="@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))"></script>
         <script type="text/javascript" src="@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.js"))"></script>
         <script type="text/javascript" src="@routes.Application.jsRoutes" defer="defer"></script>
+  		<link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
 
+  		  <link rel="stylesheet" href="@routes.Assets.at("css/style.css")" media="screen" />
+ 
         <link rel="stylesheet" href="@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))">
         <link href="@routes.Assets.at("css/main.css")" rel="stylesheet">
     </head>
@@ -46,14 +49,14 @@
                         @subjectNotPresent() {
                             <li class="@("active".when(nav == "cheflogin"))"><a href="@routes.ChefSignUp.doChefSignup()">@Messages("playauthenticate.navigation.cheflogin")</a></li>
                         }
-                        
-            <form role="search" class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" placeholder="Search chef,menu ex thai" class="form-control">
-                </div>
+              	<li>          
+            		<form role="search" class="navbar-form navbar-left">
+                		<div class="form-group">
+                    		<input type="text" placeholder="Search chef,menu ex thai" class="form-control">
+                		</div>
                       <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Search</button>
-            </form>
-       
+            		</form>
+       			</li>
                     </ul>
 
                     @subjectPresentOr() {
@@ -99,6 +102,20 @@
             <hr>
 
             <footer>
+            
+            <div class= "container">
+
+            <h1><i class="icon icon-star-empty"></i>Chef Of the Month<i class="icon icon-star-empty"></i></h1>
+
+            <p>CIk <a href="/">See related blog post</a>.</p>
+
+            <div id="social-bar">
+                 <a href="http://twitter.com/minimalmonkey" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+				 <a href="http://facebook.com" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+				 <a href="http://plus.google.com" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+            </div>
+
+        </div>
                 <p><center>&copy;
                     2015 Chef In Kitchen CopyRights.</center></p>
                
