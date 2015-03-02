@@ -13,12 +13,36 @@
         <script type="text/javascript" src="@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))"></script>
         <script type="text/javascript" src="@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.js"))"></script>
         <script type="text/javascript" src="@routes.Application.jsRoutes" defer="defer"></script>
-  		<link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css'>
-
-  		  <link rel="stylesheet" href="@routes.Assets.at("css/style.css")" media="screen" />
+  		<link  href="@routes.Assets.at("css/font-awesome.css") rel='stylesheet'>
+  	    <link rel="stylesheet" href="@routes.Assets.at("css/style.css")" media="screen" />
  
         <link rel="stylesheet" href="@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))">
         <link href="@routes.Assets.at("css/main.css")" rel="stylesheet">
+        
+  		<link rel="stylesheet" href="@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap-theme.min.css"))">
+		<script src="@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))"></script>
+        
+        <style type="text/css">
+h2{
+    margin: 0;     
+    color: #666;
+    padding-top: 90px;
+    font-size: 52px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+.item{
+    background: #333;    
+    text-align: center;
+    height: 300px !important;
+}
+.carousel{
+    margin-top: 20px;
+}
+.bs-example{
+	margin: 20px;
+}
+</style>
+        
     </head>
 
     <body>
@@ -83,20 +107,7 @@
 
 
         <div class="container">
-            @if(flash.contains(Application.FLASH_ERROR_KEY)) {
-                <div class="alert alert-danger" role="alert">
-                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">
-                        Close</span></button>
-                    @flash().get(Application.FLASH_ERROR_KEY)
-                </div>
-            }
-            @if(flash.contains(Application.FLASH_MESSAGE_KEY)) {
-                <div class="alert alert-success" role="alert">
-                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">
-                        Close</span></button>
-                    @flash().get(Application.FLASH_MESSAGE_KEY)
-                </div>
-            }
+           
             @content
 
             <hr>
