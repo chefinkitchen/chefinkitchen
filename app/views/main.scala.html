@@ -60,7 +60,7 @@
                     </ul>
 
                     @subjectPresentOr() {
-                        <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-left">
                         @defining(Application.getLocalUser(session())) { user =>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> @user.name <span class="caret"></span></a>
@@ -103,12 +103,13 @@
        <footer>
             <h1><i class="icon icon-star-empty"></i>Chef Of the Month<i class="icon icon-star-empty"></i></h1>
             <p>CIk <a href="/">FAQ</a>.</p>
-            <div id="social-bar">
+        
+             <hr>
+                 <div id="social-bar">
                  <a href="http://twitter.com/minimalmonkey" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
 				 <a href="http://facebook.com" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
 				 <a href="http://plus.google.com" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
             </div>
-             <hr>
             <p><center>&copy;
                     2015 Chef In Kitchen CopyRights.</center></p>
             </footer>
