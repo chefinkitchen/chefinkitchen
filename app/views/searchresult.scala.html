@@ -1,0 +1,11 @@
+@(searchresult: Form[_])
+
+
+@import helper._
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapBasic.f) }
+@main(Messages("playauthenticate.cheflogin.title"),"searchresult") {
+
+<div id="searchresult" class="row">
+  <h1>@Messages("This is Search result")</h1>
+</div>
+}

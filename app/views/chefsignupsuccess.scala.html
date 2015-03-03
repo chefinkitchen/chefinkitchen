@@ -1,0 +1,11 @@
+@(chefLoginSuccessForm: Form[models.ChefDetails])
+
+
+@import helper._
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapBasic.f) }
+@main(Messages("playauthenticate.cheflogin.title"),"chefloginsuccess") {
+
+<div id="chefloginsuccess" class="row">
+ @inputText(chefLoginSuccessForm("email"), '_label -> "email", 'placeholder -> "Email")
+</div>
+}
