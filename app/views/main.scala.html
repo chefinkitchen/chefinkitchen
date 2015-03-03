@@ -49,13 +49,16 @@
                         @subjectNotPresent() {
                             <li class="@("active".when(nav == "cheflogin"))"><a href="@routes.ChefSignUp.doChefSignup()">@Messages("playauthenticate.navigation.cheflogin")</a></li>
                         }
-              	<li>          
-            		<form role="search" class="navbar-form navbar-left">
+              	<li>     
+              	  	@helper.form(routes.Search.doSearch, 'class -> "navbar-form navbar-left", 'role -> "search") {
+              	   
+            		
                 		<div class="form-group">
                     		<input type="text" placeholder="Search chef,menu ex thai" class="form-control">
                 		</div>
                       <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Search</button>
-            		</form>
+            		
+            		}
        			</li>
                     </ul>
 

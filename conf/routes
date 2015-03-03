@@ -51,4 +51,5 @@ GET     /webjars/*file              controllers.WebJarAssets.at(file)
 
 
 POST    /chefsignup                 controllers.ChefSignUp.doChefSignup
-GET    /chefsignup                                controllers.ChefSignUp.chefsignup
+GET    /chefsignup                  controllers.ChefSignUp.chefsignup
+POST    /search                     controllers.Search.doSearch
