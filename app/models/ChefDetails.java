@@ -1,7 +1,13 @@
 package models;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import play.db.ebean.Model;
 
+@Entity
+@Table(name = "chef")
 public class ChefDetails extends Model {
 
 	
@@ -15,6 +21,7 @@ public class ChefDetails extends Model {
 	private  String email;
 	private String lastName;
 	private String firstName;
+	 @Id
 	public String getEmail() {
 		return email;
 	}
