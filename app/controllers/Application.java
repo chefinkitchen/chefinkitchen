@@ -34,6 +34,7 @@ public class Application extends Controller {
 	public static final String USER_ROLE = "user";
 	
 	public static Result index() {
+		
 		return ok(Json.toJson("Welcome To chef in Kitchen "));
 	}
 
