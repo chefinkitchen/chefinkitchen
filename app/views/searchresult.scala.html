@@ -1,4 +1,4 @@
-@(searchresult: Form[_])
+@(searchresult:  Form[models.SearchDetails])
 
 
 @import helper._
@@ -6,6 +6,7 @@
 @main(Messages("playauthenticate.cheflogin.title"),"searchresult") {
 
 <div id="searchresult" class="row">
-  <h1>@Messages("This is Search result")</h1>
+  <h3>@Messages("This is Search result")</h3>
+  @searchresult.get.getResult;
 </div>
 }

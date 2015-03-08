@@ -50,11 +50,11 @@
                             <li class="@("active".when(nav == "cheflogin"))"><a href="@routes.ChefSignUp.doChefSignup()">@Messages("playauthenticate.navigation.cheflogin")</a></li>
                         }
               	<li>     
-              	  	@helper.form(routes.Search.doSearch, 'class -> "navbar-form navbar-left", 'role -> "search") {
+              	  	@helper.form(routes.Search.doSearch, 'class -> "navbar-form navbar-left", 'role -> "form") {
               	   
             		
                 		<div class="form-group">
-                    		<input type="text" placeholder="Search chef,menu ex thai" class="form-control">
+                    		<input name="keyword"  id="keyword" type="text" placeholder="Search chef,menu ex thai" class="form-control">
                 		</div>
                       <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Search</button>
             		
