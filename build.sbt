@@ -1,6 +1,6 @@
 import play.PlayJava
 
-name := "play-authenticate-usage"
+name := "chef-In-Kitchen"
 
 scalaVersion := "2.11.2"
 
@@ -20,7 +20,11 @@ val appDependencies = Seq(
   javaEbean,
   "org.webjars" %% "webjars-play" % "2.3.0",
   "org.webjars" % "angularjs" % "1.1.5-1",
-  "org.webjars" % "bootstrap" % "3.2.0"
+  "org.webjars" % "bootstrap" % "3.2.0",
+  "org.elasticsearch" % "elasticsearch" % "1.4.2",
+  "io.searchbox" % "jest" % "0.1.5",
+  "org.apache.commons" % "commons-io" % "1.3.2",
+  "org.codehaus.jackson" % "jackson-mapper-asl" % "1.9.13"
 )
 
 //  Uncomment the next line for local development of the Play Authenticate core:
