@@ -25,7 +25,7 @@ import be.objectify.deadbolt.java.actions.Restrict;
 import com.feth.play.module.pa.PlayAuthenticate;
 import com.feth.play.module.pa.providers.password.UsernamePasswordAuthProvider;
 import com.feth.play.module.pa.user.AuthUser;
-import play.libs.Json;
+
 
 public class Application extends Controller {
 
@@ -34,6 +34,7 @@ public class Application extends Controller {
 	public static final String USER_ROLE = "user";
 	
 	public static Result index() {
+		
 		return ok(index.render());
 	}
 
